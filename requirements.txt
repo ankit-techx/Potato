@@ -1,0 +1,10 @@
+## Requirements:
+
+Python 3.x
+TensorFlow
+Keras
+Streamlit
+NumPy
+Matplotlib
+Pillow
+Requests
