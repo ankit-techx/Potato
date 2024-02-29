@@ -53,3 +53,5 @@ The web application loads the trained model and provides a simple interface for 
 - The dataset used in this project is provided by [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset).
 - The pre-trained VGG16 model is obtained from the Keras Applications module.
 
+![image](https://github.com/ankit-techx/Potato_leaves_disease_classification/assets/101319910/c8fef0bb-be24-4fd1-af1d-f30f5dfcd7fd)
+
