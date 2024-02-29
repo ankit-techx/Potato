@@ -1,6 +1,6 @@
 ## Requirements:
 
-Python 3
+python>=3.7
 TensorFlow
 Keras
 Streamlit
