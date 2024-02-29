@@ -1,7 +1,7 @@
 
 # Potato Disease Classification
 
-This project aims to classify potato diseases using machine learning and deep learning techniques. It includes code for training a convolutional neural network (CNN) model using TensorFlow/Keras and integrating the trained model into a web application using Streamlit.
+This project aims to classify potato diseases(healthy, early blight, late blight) using machine learning and deep learning techniques. It includes code for training a convolutional neural network (CNN) model using TensorFlow/Keras and integrating the trained model into a web application using Streamlit.
 
 ## Dataset
 
