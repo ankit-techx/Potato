@@ -59,20 +59,27 @@ if option == "Upload Image":
 elif option == "Provide Image URL":
     # Text input for image URL
     image_url = st.text_input("Enter Image URL:")
-    
-    if image_url:
-        try:
-            # Download the image from the URL
-            response = requests.get(image_url)
-            img = Image.open(BytesIO(response.content))
-            st.image(img, caption="Image from URL", use_column_width=True)
 
-            # Predict the class of the image from URL
-            prediction = predict_image_class(img)
-            predicted_class_index = np.argmax(prediction)
-            predicted_class_label = get_class_label(predicted_class_index)
-            predicted_class_percentage = round(prediction[predicted_class_index] * 100, 2)
-            st.write("Predicted Class:", predicted_class_label)
-            st.write("Predicted percent:", f"{predicted_class_percentage}%")
-        except Exception as e:
-            st.write("Error:", e)
+    # Button to trigger image classification
+    classify_button = st.button("Classify")
+
+    if classify_button:
+        if image_url:
+            try:
+                # Download the image from the URL
+                response = requests.get(image_url)
+                response.raise_for_status()  # Raise HTTPError for bad responses
+                img = Image.open(BytesIO(response.content))
+                st.image(img, caption="Image from URL", use_column_width=True)
+
+                # Predict the class of the image from URL
+                prediction = predict_image_class(img)
+                predicted_class_index = np.argmax(prediction)
+                predicted_class_label = get_class_label(predicted_class_index)
+                predicted_class_percentage = round(prediction[predicted_class_index] * 100, 2)
+                st.write("Predicted Class:", predicted_class_label)
+                st.write("Predicted percent:", f"{predicted_class_percentage}%")
+            except requests.exceptions.RequestException as e:
+                st.write("Error: Failed to retrieve image from URL.")
+            except Exception as e:
+                st.write("Error:", e)
