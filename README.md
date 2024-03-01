@@ -3,6 +3,9 @@
 
 This project aims to classify potato diseases(healthy, early blight, late blight) using machine learning and deep learning techniques. It includes code for training a convolutional neural network (CNN) model using TensorFlow/Keras and integrating the trained model into a web application using Streamlit.
 
+Link to the website:
+https://potato-classification.streamlit.app/
+
 ## Dataset
 
 The dataset used for training the model is the "PlantVillage" dataset, which contains images of various plant diseases, including potato diseases. The dataset can be obtained from [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset).
