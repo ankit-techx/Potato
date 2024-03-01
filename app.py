@@ -7,6 +7,10 @@ from io import BytesIO
 from keras.preprocessing import image
 from keras.models import load_model
 
+# Load background image
+background_image = Image.open("potato.webp")
+st.image(background_image, use_column_width=True)
+
 # Load the trained model
 model = load_model("potato_disease_classification_model.h5")
 
