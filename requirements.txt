@@ -4,3 +4,4 @@ Pillow
 Pillow
 Requests
 streamlit
+tensorflow
